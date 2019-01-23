@@ -59,13 +59,15 @@
 
         getBooks2();
 
-      $("#moreT").click(function(){
+      $("#moreT").click(function(e){
+        e.preventDefault();
         tStart += 5;
         tEnd += 5;
         getBooks1();
       });
 
-      $("#moreB").click(function(){
+      $("#moreB").click(function(e){
+        e.preventDefault();
         bStart += 5;
         bEnd += 5;
         getBooks2();
