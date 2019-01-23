@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FED_books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="books.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="header">
+      <p>Assemble Books</p>
+    </div>
+    <div class="container">
+      <h1>Books</h1>
+      <div id="aToM" class="bookList">
+        <h3>Titles A-M</h3>
+
+      </div>
+      <button id="moreT" type="button" name="button"><a href="#" title="" id="results-show-more">show more</a></button>
+
+      <div id="nToZ" class="bookList">
+        <h3>Titles N-Z</h3>
+
+      </div>
+      <button id="moreB" type="button" name="button"><a href="#" title="" id="results-show-more">show more</a></button>
+    </div>
+    <div class="jumbotron">
+      <p>Assemble Books</p>
+      <a href="#">Link</a>
+    </div>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script>
+      var tStart = 0;
+      var bStart = 0;
+      var tEnd = 5;
+      var bEnd = 5;
+
+    function getBooks1(){
+      for(var i = tStart; i < tEnd; i++){
+        $('#aToM').append($('<div/>', {'id':'book'+i, 'class' : 'book'}))
+        $('#book'+i).prepend($('<img>',{class: 'images', id:'thumb',src:aToM[i].volumeInfo.imageLinks.thumbnail}))
+        console.log("working");
+    }}
+
+        getBooks1();
+
+    function getBooks2(){
+      for(var x = bStart; x < bEnd; x++){
+        $('#nToZ').append($('<div/>', {'id':'book'+x+i, 'class' : 'book'}))
+        $('#book'+x+i).prepend($('<img>',{class: 'images', id:'thumb',src:nToZ[x].volumeInfo.imageLinks.thumbnail}))
+        console.log("whyyy")
+    }}
+
+        getBooks2();
+
+      $("#moreT").click(function(){
+        tStart += 5;
+        tEnd += 5;
+        getBooks1();
+      });
+
+      $("#moreB").click(function(){
+        bStart += 5;
+        bEnd += 5;
+        getBooks2();
+      });
+    </script>
+</html>

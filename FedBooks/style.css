@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+.header{
+  background: rgb(250, 250, 250);
+  height: 20%;
+}
+.header p{
+  margin-left: 13%;
+}
+button{
+  height: auto;
+  width:auto;
+  margin-left: 50%;
+  text-align: center;
+}
+p, a{
+  display: inline;
+}
+.jumbotron{
+  margin-top: 5%;
+  padding-left: 13%;
+  background: rgb(237, 237, 237);
+  position: absolute;
+}
+#thumb{
+  height: 200px;
+  width: 150px;
+  margin-bottom: 1%;
+  border-radius: 7px;
+}
+#aToM, #nToZ{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.bookList div{
+  background: red;
+  display: inline;
+  margin: 1%;
+  text-align: center;
+}
